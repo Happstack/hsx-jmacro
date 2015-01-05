@@ -14,6 +14,10 @@ Cabal-version:       >=1.6
 Extra-source-files:  example.hs,
                      example2.hs
 
+source-repository head
+  type: git
+  location: https://github.com/Happstack/hsx-jmacro.git
+
 Library
   Exposed-modules:   HSP.JMacro
                      HSP.JMacroT
