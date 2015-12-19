@@ -11,8 +11,10 @@ Stability:           Provisional
 Category:            Web
 Build-type:          Simple
 Cabal-version:       >=1.6
+tested-with:         GHC == 7.6.3, GHC == 7.8.4, GHC == 7.10.3
 Extra-source-files:  example.hs,
-                     example2.hs
+                     example2.hs,
+                     README.md
 
 source-repository head
   type: git
