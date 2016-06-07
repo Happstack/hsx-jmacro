@@ -109,7 +109,7 @@ instance (XMLGenerator m, IntegerSupply m, EmbedAsChild m Text, StringType m ~ T
                     [asAttr ((fromStringLit "type" := fromStringLit "text/javascript") :: Attr Text Text)]
                     [asChild (displayT $ renderOneLine $ renderPrefixJs (show i) jstat)]
 
-instance (IntegerSupply m, EmbedAsAttr m (Attr n Text)) => EmbedAsAttr m (Attr n JStat) where
+instance (XMLGen m, IntegerSupply m, EmbedAsAttr m (Attr n Text)) => EmbedAsAttr m (Attr n JStat) where
   asAttr (n := jstat) =
       do i <- lift nextInteger
          asAttr $ (n := (displayT $ renderOneLine $ renderPrefixJs (show i) jstat))
